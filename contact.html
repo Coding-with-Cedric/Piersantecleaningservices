@@ -53,13 +53,13 @@
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3">
                     <small class="far fa-clock custom-green-icon me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 04.00 PM</small>
+                    <small>Mon - Fri : 9.00 AM - 5.00 PM</small>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt custom-green-icon me-2"></small>
-                    <small>352-615-6028</small>
+                    <small>682-557-2798</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square social-btn me-1" href="https://www.facebook.com/profile.php?id=61573398472835"><i class="fab fa-facebook-f"></i></a>
@@ -131,40 +131,51 @@
                             <h1 class="display-5 mb-4">Contact Us</h1>
                         </div>
                         <p class="mb-4">Ready to experience top-tier cleaning services? Reach out to us today and let us take care of all your cleaning needs, whether it's for your home, office, or any special event. Our team is eager to provide you with a free, no-obligation quote and get started on making your space spotless and inviting!</p>
-                        <form>
-                        <!-- <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                        <form> -->
+                        
+                        <form id="contact-form" action="https://formspree.io/f/xnndngwd" method="POST">
+                            <input type="hidden" name="_format" value="html"> <!-- Important -->
+                          
                             <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
+                              <div class="col-md-6">
+                                <div class="form-floating">
+                                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                  <label for="name">Your Name</label>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
+                              </div>
+                          
+                              <div class="col-md-6">
+                                <div class="form-floating">
+                                  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                  <label for="email">Your Email</label>
                                 </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
+                              </div>
+                          
+                              <div class="col-12">
+                                <div class="form-floating">
+                                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                  <label for="subject">Subject</label>
                                 </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
+                              </div>
+                          
+                              <div class="col-12">
+                                <div class="form-floating">
+                                  <textarea class="form-control" id="message" name="message" placeholder="Leave a message here" style="height: 100px" required></textarea>
+                                  <label for="message">Message</label>
                                 </div>
-                                <div class="col-12">
-                                    <button class="btn btn custom-green-btn w-100 py-3" type="submit">Send Message</button>
-                                </div>
+                              </div>
+                          
+                              <div class="col-12">
+                                <button class="btn btn custom-green-btn w-100 py-3" type="submit">Send Message</button>
+                              </div>
                             </div>
-                        </form>
-                    </div>
+                          </form>
+                        </div>
+                          
+                          <div id="thank-you-message" style="display: none; text-align: center; padding-top: 20px;">
+                            <h4>🎉 Thank you for your message!</h4>
+                            <p>We'll get back to you shortly.</p>
+                          </div>
+                          
                 </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
@@ -187,7 +198,7 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h4 class="text-light mb-4">Address</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Dallas, TX, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>352-615-6028</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>682-557-2798</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i> Piersantecleaningservices@gmail.com</p>
                     <div class="d-flex pt-2">
                         <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
@@ -211,14 +222,13 @@
                     <a class="btn btn-link" href="project.html">FAQ</a>
                     <a class="btn btn-link" href="service.html">Our Services</a> 
                 </div> 
-                
-                 
+              
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Email</h4>
-                    <p>Get in touch for a personalized cleaning plan – leave your email and we’ll reach out!</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <p>Use the form above to contact us and we’ll reach out!</p>
+                    <!-- <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Email">        
-                    </div> 
+                    </div>  -->
                 </div>
             </div>
         </div>
@@ -238,6 +248,35 @@
     </div>
     <!-- Footer End -->
 
+    
+    <!--Form Script-->
+    <script>
+        const form = document.querySelector('form');
+        const thankYouMessage = document.getElementById('thank-you-message');
+      
+        form.addEventListener('submit', function (e) {
+          e.preventDefault(); // prevent the default redirect
+          const formData = new FormData(form);
+      
+          fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              form.style.display = "none";
+              thankYouMessage.style.display = "block";
+              form.reset();
+            } else {
+              alert("Oops! Something went wrong.");
+            }
+          });
+        });
+      </script>
+      <!--Form Script End-->
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg custom-green-btn btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
@@ -253,6 +292,35 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const form = document.getElementById("contact-form");
+          const thankYou = document.getElementById("thank-you-message");
+      
+          if (form) {
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
+              const formData = new FormData(form);
+      
+              fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: { Accept: "application/json" }
+              }).then(response => {
+                if (response.ok) {
+                  form.style.display = "none";
+                  thankYou.style.display = "block";
+                  form.reset();
+                } else {
+                  alert("Oops! Something went wrong.");
+                }
+              });
+            });
+          }
+        });
+      </script>
+      
 </body>
 
 </html>

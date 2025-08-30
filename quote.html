@@ -52,13 +52,13 @@
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3">
                     <small class="far fa-clock custom-green-icon me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 04.00 PM</small>
+                    <small>Mon - Fri : 9.00 AM - 5.00 PM</small>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt custom-green-icon me-2"></small>
-                    <small>352-615-6028</small>
+                    <small>682-557-2798</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square social-btn me-1" href="https://www.facebook.com/profile.php?id=61573398472835"><i class="fab fa-facebook-f"></i></a>
@@ -129,45 +129,64 @@
         </header> -->
 
         <body>
-        <section class="quote-form">
-            <div class="container">
+            <section class="quote-form">
+              <div class="container">
                 <div class="form-title"> 
-                    <h2>Request a Quote</h2>
-                    <p>Fill in the details below to receive a free, no-obligation cleaning quote tailored to your needs.</p>
+                  <h2>Request a Quote</h2>
+                  <p>Fill in the details below to receive a free, no-obligation cleaning quote tailored to your needs.</p>
                 </div>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" placeholder="Enter your email address" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Your Phone</label>
-                        <input type="tel" id="phone" placeholder="Enter your phone number" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Select A Service</label>
-                        <select id="service" required>
-                            <option value="">Select a Service</option>
-                            <option value="Basic Cleaning">Basic Cleaning</option>
-                            <option value="Deep Cleaning">Deep Cleaning</option>
-                            <option value="Office Cleaning">Office Cleaning</option>
-                            <option value="Post Construction">Post Construction</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Additional Information</label>
-                        <textarea id="message" placeholder="Tell us more about your cleaning needs"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit">Get My Free Quote</button>
-                    </div>
+          
+                <!-- ✅ Quote Form -->
+                <form id="quote-form" action="https://formspree.io/f/xnndngwd" method="POST">
+                  <input type="hidden" name="_format" value="html">
+          
+                  <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="phone">Your Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="service">Select A Service</label>
+                    <select id="service" name="service" required>
+                      <option value="">Select a Service</option>
+                      <option value="Basic Cleaning">Residential Cleaning</option>
+                      <option value="Deep Cleaning">Deep Cleaning</option>
+                      <option value="Office Cleaning">Office Cleaning</option>
+                      <option value="Post Construction">Move-In/Move-Out Cleaning</option>
+                      <option value="Post Construction">Post Construction</option>
+                      <option value="Post Construction">Holiday or Seasonal Cleaning</option>
+                      <option value="Post Construction">Other</option>
+                    </select>
+                  </div>
+          
+                  <div class="form-group">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" name="message" placeholder="Tell us more about your cleaning needs"></textarea>
+                  </div>
+          
+                  <div class="form-group">
+                    <button type="submit">Get My Free Quote</button>
+                  </div>
                 </form>
-            </div>
-        </section>
+          
+                <!-- ✅ Hidden thank-you message -->
+                <div id="quote-thankyou" style="display: none; text-align: center; padding-top: 30px;">
+                  <h4>🎉 Thank you for requesting a quote!</h4>
+                  <p>We’ll get back to you as soon as possible.</p>
+                </div>
+              </div>
+            </section>
+          
     
         
         
@@ -179,7 +198,7 @@
             <div class="col-lg-3 col-md-6 mb-4">
                 <h4 class="text-light mb-4">Address</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Dallas, TX, USA</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>352-615-6028</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>682-557-2798</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i> Piersantecleaningservices@gmail.com</p>
                 <div class="d-flex pt-2">
                     <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
@@ -211,9 +230,9 @@
             <!-- </div> -->
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Email</h4>
-                <p>Get in touch for a personalized cleaning plan – leave your email and we’ll reach out!</p>
-                <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                <p>Use the form above to contact us and we’ll reach out!</p>
+                <!-- <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"> -->
                     <!-- <button type="button" class="btn btn custom-green-btn py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button> -->
                 </div> 
             </div>
@@ -235,7 +254,36 @@
 </div>
 <!-- Footer End -->
 
-
+    <!--Form Script-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const quoteForm = document.getElementById("quote-form");
+          const quoteThanks = document.getElementById("quote-thankyou");
+      
+          if (quoteForm) {
+            quoteForm.addEventListener("submit", function (e) {
+              e.preventDefault();
+              const formData = new FormData(quoteForm);
+      
+              fetch(quoteForm.action, {
+                method: "POST",
+                body: formData,
+                headers: { Accept: "application/json" }
+              }).then(response => {
+                if (response.ok) {
+                  quoteForm.style.display = "none";
+                  quoteThanks.style.display = "block";
+                  quoteForm.reset();
+                } else {
+                  alert("Oops! Something went wrong.");
+                }
+              });
+            });
+          }
+        });
+      </script>
+      
+      <!--Form Script End-->
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg custom-green-btn btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
